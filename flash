@@ -1,0 +1,13 @@
+/* Makes an DOM element flash
+ * Takes 2 params 
+ * wait is the time between flashes
+ * repeat is the number of times it will flash
+ * Always ends with the element faded in
+ */
+
+$.fn.flash = function (wait, repeat) {
+  for(i=0; i < repeat; i++) {
+    $(this).fadeOut(50).delay(wait).fadeIn(50).delay(wait);
+  }
+  this.fadeIn(50);
+};
